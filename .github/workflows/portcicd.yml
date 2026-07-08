@@ -93,3 +93,11 @@ jobs:
           --cluster $ECS_CLUSTER \
           --service $ECS_SERVICE \
           --force-new-deployment
+
+    - name: Debug values
+      run: |
+       echo "Cluster: $ECS_CLUSTER"
+       echo "Service: $ECS_SERVICE"
+       echo "Region: $AWS_REGION"
+       echo "Role: ${{ secrets.AWS_ROLE_ARN }}"
+       
